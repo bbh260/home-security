@@ -1,6 +1,3 @@
-
-### SRI KANIPAKALA COVID-19 project 2020
-
 import cv2
 import numpy as np
 import time
@@ -46,36 +43,6 @@ def light():
     mouse.click(Button.left, 1)
     print("[+] Resetting Light")
 
-# Function to send email
-# def send_email():
-#     sender_email = "221b124@juetguna.in"
-#     receiver_email = "221b124@juetguna.in"  # Ensure to replace with recipient's email
-#     password = "SEP&2009"
-
-#     message = MIMEMultipart()
-#     message["From"] = sender_email
-#     message["To"] = receiver_email
-#     message["Subject"] = "Alert: Low Confidence Detected"
-
-#     body = "The confidence level is below 52%. Potential security breach detected."
-#     message.attach(MIMEText(body, "plain"))
-
-#     try:
-#         server = smtplib.SMTP_SSL("smtp.in", 465)
-#         server.login(sender_email, password)
-#         server.sendmail(sender_email, receiver_email, message.as_string())
-#         server.quit()
-#         print("Email sent successfully!")
-#     except Exception as e:
-#         print("Error sending email:", str(e))
-
-# Sample confidence level
-confidence_level = 50  # Placeholder confidence level for demonstration
-
-# if confidence_level < 52:
-#     send_email()
-
-
 while cam.isOpened():
     color = (0,0,255) ## RED
     ret, im =cam.read()
@@ -102,15 +69,9 @@ while cam.isOpened():
                 
                 Id="MASTER"
                 if(conf < 52):
-                    
-                    # response = "START.mp3"
-                    ##os.system("start adiAllow.mp3")
-                    #send_email()
                     check=1
                     readingA = readingA +1
-                    ##time.sleep(3)
-                    
-                    
+                    ##time.sleep(3)              
                 
             elif(Id==2):
                 Id="USER1"
